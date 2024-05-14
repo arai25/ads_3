@@ -38,7 +38,6 @@ public class MyHashTable<K, V> {
         if (chainArray[index] == null) {
             chainArray[index] = new HashNode<>(key, value);
         } else {
-            // Handle collision by chaining
             HashNode<K, V> current = chainArray[index];
             while (current != null) {
                 if (current.key.equals(key)) {
